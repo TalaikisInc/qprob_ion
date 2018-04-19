@@ -1,0 +1,13 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Results</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <categories [category]="category"></categories>
+  <posts *ngFor="let post of posts" [post]=post></posts>
+</ion-content>

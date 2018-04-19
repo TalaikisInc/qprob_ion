@@ -1,0 +1,9 @@
+<ion-list>
+    <ion-item *ngIf="category" text-wrap (click)="goPostsByCat(category.slug, category.title)">
+        <ion-thumbnail item-start>
+            <div *ngIf="category.thumbnail"><img src="{{ baseUrl }}{{ category.thumbnail }}" /></div>
+        </ion-thumbnail>
+        <h2>{{ category.title }}</h2>
+        <p></p>
+    </ion-item>
+</ion-list>

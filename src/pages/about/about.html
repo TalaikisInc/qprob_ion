@@ -1,0 +1,31 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>About</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item>
+        <div text-wrap>QProb is a service created by
+            <button (click)="openURL(creatorUrl)" color="secondary">Talaikis Inc.</button> to provide time saving service on collecting valuable news we can't miss on {{ subject }} each day.</div>
+        <h5>&nbsp;</h5>
+        <h5>Features</h5>
+        <ul>
+            <li text-wrap><strong>Listen</strong> Touch the text and your personal gin will speak it out.</li>
+            <!-- <li text-wrap><strong>Speak</strong> After the spoken summary, you can send voice commands:
+                <ul>
+                    <li text-wrap>"Next": reads next summary.</li>
+                    <li text-wrap>"Stop": stops reading.</li>
+                </ul>
+            </li>-->
+            <li text-wrap><strong>Add your author</strong> You can add your own RSS source
+                <button (click)="openURL(sourceUrl)" color="secondary">here</button>. If it is valid and approved, you'll see summaries here and on the website soon.</li>
+        </ul>
+    </ion-item>
+</ion-content>

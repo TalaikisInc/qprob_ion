@@ -1,0 +1,21 @@
+<ion-menu [content]="content">
+    <ion-content padding class="menu">
+        <ion-grid style="margin-top:4vh">
+            <ion-row padding align-items-center *ngFor="let page of pages">
+                <ion-col col-1>
+                    <i class="fa {{ page.icon }} fa-white"></i>
+                </ion-col>
+
+                <ion-col col-auto style="margin-left:4vw">
+                    <div menuClose (click)="openPage(page)" class="menu-component">
+                        <p>{{ page.title }}</p>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+    </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

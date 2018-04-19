@@ -1,0 +1,40 @@
+@font-face {
+    font-family: Oswald;
+    src: url('../assets/fonts/pEobIV_lL25TKBpqVI_a2w.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url('../assets/fonts/K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: Lato;
+    src: url('../assets/fonts/UyBMtLsHKBKXelqf4x7VRQ.woff2') format('woff2');
+}
+
+.menu {
+    //background-color: #4527a0;
+    background: -moz-linear-gradient(45deg, #7953d2, 0%, #000070, 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #7953d2), color-stop(100%, #000070));
+    /*background: -webkit-linear-gradient(45deg, #7953d2 0%, #4527a0 100%);
+    background: -o-linear-gradient(45deg, #7953d2 0%, #4527a0 100%);
+    background: -ms-linear-gradient(45deg, #7953d2 0%, #4527a0 100%);
+    background: linear-gradient(45deg, #7953d2 0%, #4527a0 100%);*/
+}
+
+.menu-component {
+    margin-top: -5vh;
+    margin-bottom: -5vh;
+}
+
+p {
+    letter-spacing: 1px;
+    font-size: 1.6em;
+    font-family: Oswald;
+    color: white;
+}
+
+.fa-white {
+    color: white;
+}

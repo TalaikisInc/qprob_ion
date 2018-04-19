@@ -1,0 +1,47 @@
+<ion-card>
+    <ion-card-header>
+        <ion-card-title text-wrap (click)="toPost(post.slug)">
+            {{ post.title }}
+            <ion-row>
+                <ion-col col-auto>
+                    <small>
+            <div [ngClass]="(post.sentiment >= 0) ? 'sentUp' : 'sentDn'">
+              [{{ post.sentiment }}]
+            </div>
+          </small>
+                </ion-col>
+            </ion-row>
+        </ion-card-title>
+        <h5 (click)="goToPostsByCat(post.category_id.Slug, post.category_id.Title)">By {{ post.category_id.Title }}</h5>
+    </ion-card-header>
+
+    <div *ngIf="post.image"><img src="{{ baseUrl }}{{ post.image }}" onerror="this.style.display='none'" /></div>
+
+    <ion-card-content>
+        <p text-wrap (click)="speakPost(post.title, post.summary)">{{ post.summary }}</p>
+    </ion-card-content>
+    <ion-row>
+        <ion-col col-auto col-sm>
+            <button ion-button icon-left clear small>
+                <!-- source should be deleted due to widthproblems if speech reogntion below is enabled-->
+              <div (click)="openURL(post.url)"><ion-icon name="link"></ion-icon>Source</div>
+            </button>
+        </ion-col>
+        <!--
+            This feature only for speech recognition, if enabled
+            <ion-col col-auto col-sm>
+            <button ion-button icon-left clear small>
+                <div (click)="listen()"><ion-icon name="mic"></ion-icon></div>
+            </button>
+        </ion-col>-->
+        <ion-col col-auto col-sm>
+            <button ion-button icon-left clear small>
+                <ion-icon name="time"></ion-icon>
+                <div>{{ post.date | formatDate }}</div>
+            </button>
+            <ion-card-content *ngFor="let speech of speechList">
+                <p>{{speech}}</p>
+            </ion-card-content>
+        </ion-col>
+    </ion-row>
+</ion-card>
